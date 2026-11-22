@@ -1,0 +1,32 @@
+# Local Postgres 16 + Redis 7 for development and tests.
+# Host ports default to 5433/6380 so they don't clash with other local databases; override with DB_PORT / REDIS_PORT.
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: devcommons
+      POSTGRES_PASSWORD: devcommons
+      POSTGRES_DB: devcommons
+    ports:
+      - "127.0.0.1:${DB_PORT:-5433}:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./scripts/init-test-db.sql:/docker-entrypoint-initdb.d/init-test-db.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U devcommons -d devcommons"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "127.0.0.1:${REDIS_PORT:-6380}:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+volumes:
+  pgdata:

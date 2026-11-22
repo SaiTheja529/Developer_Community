@@ -1,0 +1,9 @@
+Hi $display_name,
+
+Welcome to $app_name! Confirm your email address by opening this link (valid for 24 hours):
+
+$link
+
+If you did not create an account, you can ignore this email.
+
+— The $app_name team

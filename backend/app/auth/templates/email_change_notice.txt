@@ -1,0 +1,7 @@
+Hi $display_name,
+
+Someone requested to change the email on your $app_name account to $new_email_masked. The change only happens after the new address is confirmed.
+
+If this was not you, change your password now: $frontend_url/forgot-password
+
+— The $app_name team

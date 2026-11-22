@@ -1,0 +1,5 @@
+[  548656ms] [LOG] [vite] server connection lost. Polling for restart... @ http://localhost:5174/@vite/client:1078
+[  552989ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/client-D7P7Zikj.js?v=41c23216:15558
+[  675327ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:5174/node_modules/.vite/deps/three.module-DOkFhzP6.js?v=41c23216:1742
+[  677365ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5174/node_modules/.vite/deps/client-D7P7Zikj.js?v=41c23216:15558
+[  678157ms] [WARNING] THREE.Clock: This module has been deprecated. Please use THREE.Timer instead. @ http://localhost:5174/node_modules/.vite/deps/three.module-DOkFhzP6.js?v=41c23216:1742

@@ -1,0 +1,7 @@
+Hi $display_name,
+
+We detected that an old sign-in token for your $app_name account was reused, which can mean it was stolen. We signed that session out to protect you.
+
+If you did not expect this, sign in again and change your password: $frontend_url/forgot-password
+
+— The $app_name team

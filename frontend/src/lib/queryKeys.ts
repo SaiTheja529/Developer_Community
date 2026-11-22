@@ -1,0 +1,17 @@
+export const qk = {
+  config: ['meta', 'config'] as const,
+  home: ['home'] as const,
+  me: ['users', 'me'] as const,
+  aiStatus: ['ai', 'status'] as const,
+  list: (module: string, params: object) => [module, 'list', params] as const,
+  detail: (module: string, id: string) => [module, 'detail', id] as const,
+  comments: (targetType: string, id: string, sort: string) => ['comments', targetType, id, sort] as const,
+  suggestions: (targetType: string, id: string, filters: object) => ['suggestions', targetType, id, filters] as const,
+  reviews: (harnessId: string, sort: string) => ['reviews', harnessId, sort] as const,
+  conversations: ['ai', 'conversations'] as const,
+  conversation: (id: string) => ['ai', 'conversation', id] as const,
+  unreadCount: ['notifications', 'unread'] as const,
+  search: (q: string, limit: number) => ['search', q, limit] as const,
+  profile: (u: string) => ['users', 'profile', u] as const,
+  contributions: (u: string, type: string, page: number) => ['users', 'contributions', u, type, page] as const,
+};
